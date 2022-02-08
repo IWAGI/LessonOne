@@ -9,35 +9,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.isHidden = true
         
-        let topColor = UIColor(red: 219/255, green: 98/255, blue: 222/255, alpha: 1)
-        let bottomColor = UIColor(red: 174/255, green: 81/255, blue: 222/255, alpha: 1)
-        
-        let gradientColors = [topColor.cgColor, bottomColor.cgColor]
-        
-        let gradientLayer: CAGradientLayer = CAGradientLayer()
-        gradientLayer.colors = gradientColors
-        
-        gradientLayer.frame = button.bounds
-        
-        
+        helloLabel.isHidden = true
     }
 
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        if label.isHidden {
+    @IBAction func buttonTapped() {
+        if helloLabel.isHidden {
             button.setTitle("Hide text", for: .normal)
-            label.isHidden = false
+            helloLabel.isHidden = false
         } else {
             button.setTitle("Show text", for: .normal)
-            label.isHidden = true
+            helloLabel.isHidden = true
         }
     }
     
+    @IBAction func hideButtonTapped() {
+        button.setTitle("Show text", for: .normal)
+        helloLabel.isHidden = true
+    }
 }
 
