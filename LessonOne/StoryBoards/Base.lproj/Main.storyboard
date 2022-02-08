@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="-13.6" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Second Screen View Controller-->
         <scene sceneID="Jmp-hA-xcP">
             <objects>
-                <viewController id="2gY-5W-H1P" sceneMemberID="viewController">
+                <viewController id="2gY-5W-H1P" customClass="SecondScreenViewController" customModule="LessonOne" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vsV-Fq-hiJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +129,6 @@
                                             <constraint firstAttribute="height" constant="60" id="atM-eL-yRa"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="trb-Fl-Qkb"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Back" cornerStyle="capsule">
                                             <backgroundConfiguration key="background">
                                                 <color key="backgroundColor" red="0.57929110530000005" green="0.01712936722" blue="0.1233028397" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,6 +136,10 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backButtonTapped" destination="2gY-5W-H1P" eventType="touchUpInside" id="i3J-uE-JBQ"/>
+                                            <action selector="goBack" destination="HH7-b3-6Av" eventType="touchUpInside" id="cZA-bm-ZpY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

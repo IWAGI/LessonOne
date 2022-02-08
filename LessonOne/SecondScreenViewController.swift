@@ -11,7 +11,9 @@ class SecondScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .cyan
+    }
+    
+    @IBAction func backButtonTapped() {
+        dismiss(animated: true)
     }
 }
